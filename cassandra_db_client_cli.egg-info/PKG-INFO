@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cassandra-db-client-cli
+Version: 0.0.1
+Summary: Cassandra DB Client CLI
+Home-page: TODO
+Author: Eyad
+Author-email: eyadmshokry@gmail.com
+Keywords: Cassandra,DB,client,cli
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Client Libraries :: Python Modules
