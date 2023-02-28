@@ -1,2 +1,0 @@
-[console_scripts]
-cassandra_cli = cli.__main__:cli
