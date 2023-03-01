@@ -1,0 +1,8 @@
+# These values should be written successfully in order to be able to connect to cassandra-db server.
+server:
+  host: '127.0.0.1'
+  port: 9042
+cassandra:
+  keyspace: 'calldrop'
+
+# It may be extended in the future with other keys.

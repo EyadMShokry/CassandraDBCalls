@@ -1,5 +1,7 @@
 import click
 from cli.cassandra_db_handler import CassandraDBHandler
+from cli.constants import LOGGING_CONFIGURATION_FILE_PATH
+from cli.utils import load_yaml
 
 
 class CallsGetCommand:
@@ -15,14 +17,18 @@ class CallsGetCommand:
         duration: str,
         phone_number: str,
     ):
+        """Initialize the class."""
         self._duration = duration
         self._phone_number = phone_number
+        self._db_configs = load_yaml(LOGGING_CONFIGURATION_FILE_PATH)
 
     def run(self):
         """Executes the command."""
 
         # TODO: read these values from configurations yaml file
-        cassandra_handler = CassandraDBHandler(host='127.0.0.1', port=9042, keyspace='calldrop')
+        cassandra_handler = CassandraDBHandler(host=self._db_configs['server']['host'],
+                                               port=self._db_configs['server']['port'],
+                                               keyspace=self._db_configs['cassandra']['keyspace'])
         calls_percentage = cassandra_handler.get_successful_calls(duration=self._duration, user_phone_number=self._phone_number)
         click.echo(calls_percentage)
 
