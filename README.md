@@ -1,17 +1,17 @@
 # Cassandra DB CLI Package
 
-This package introduces a CLI program which have only one command so far to get calls recrods from Cassandra DB based on class durations and callers phone numbers.
+This package introduces a CLI program which have only one command so far to get calls records from Cassandra DB based on class durations and callers phone numbers.
 
 ## Prerequisites
 
 - [Click~=8.1.3](https://click.palletsprojects.com/en/8.1.x/) is used to write the CLI Program.
 - [cassandra-driver~=3.25.0](https://pypi.org/project/cassandra-driver/) is used to deal with Cassandra DB.
+- [PyYAML>=6.0](https://pypi.org/project/PyYAML/) is used to parse configuration yaml files.
 
-Please take a look at `requirements.txt` file to show all the dependencies. They will be installed automatically when you install this project package.
 ## Installation
 
 1. Clone or download this repository.
-2. Write your Cassandra DB server host, port, and keyspace variables in the `configuration.YAML`. They will be used to connect and retrieve data records by `CassandraDBHandler` class in `cassandra_db_handler.py` file. 
+2. Write your Cassandra DB server host, port, and keyspace variables in the `configurations/cassandra_db_connection.yaml`. They will be used to connect and retrieve data records by `CassandraDBHandler` class in `cassandra_db_handler.py` file. 
 3. Install the CLI package using pip: `pip install .` (alternatively, you may install the package in editable mode using `pip install -e .`)
 
 ## Usage
