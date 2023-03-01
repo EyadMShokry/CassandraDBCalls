@@ -1,0 +1,4 @@
+[pytest]
+markers =
+    cli: mark a test as a cli test (deselect with '-m "not cli"')
+    components: mark a test as a components test (deselect with '-m "not components"')
