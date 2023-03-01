@@ -25,7 +25,7 @@ class CassandraDBHandler:
 
         self._current_session = current_session
 
-    def calculate_succesfull_calls(self, calls_rows: List) -> int:
+    def calculate_successful_calls(self, calls_rows: List) -> int:
         """Returns percentage of the successful calls found in the given calls_rows argument.
 
         Args:
@@ -61,6 +61,6 @@ class CassandraDBHandler:
         query += ' ALLOW FILTERING;'
 
         calls_rows = self._current_session.execute(query=query)
-        successful_calls_percentage = self.calculate_succesfull_calls(calls_rows=list(calls_rows))
+        successful_calls_percentage = self.calculate_successful_calls(calls_rows=list(calls_rows))
 
         return f"{successful_calls_percentage}%"

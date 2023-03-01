@@ -25,7 +25,6 @@ class CallsGetCommand:
     def run(self):
         """Executes the command."""
 
-        # TODO: read these values from configurations yaml file
         cassandra_handler = CassandraDBHandler(host=self._db_configs['server']['host'],
                                                port=self._db_configs['server']['port'],
                                                keyspace=self._db_configs['cassandra']['keyspace'])
